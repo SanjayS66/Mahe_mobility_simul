@@ -1,24 +1,32 @@
 cmake_minimum_required(VERSION 3.8)
 project(mini_r1_v1_gz)
 
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
-endif()
-
-# find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(ros_gz_sim REQUIRED)
+find_package(ament_cmake_python REQUIRED)  
+find_package(rclpy REQUIRED)
+find_package(nav2_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 
-install( DIRECTORY launch config
-  DESTINATION share/${PROJECT_NAME})
+# Remove or Comment out this line if you don't have a 
+# folder named 'mini_r1_v1_gz' with an __init__.py inside it.
+# ament_python_install_package(${PROJECT_NAME})
+
+# Correctly install the launch and config directories
+install(DIRECTORY launch config
+  DESTINATION share/${PROJECT_NAME}
+)
+
+# Install Python scripts so they are executable
+# Note: Ensure the path to 2d_goal_to_action.py is correct relative to CMakeLists.txt
+install(PROGRAMS
+  scripts/2d_goal_to_action.py  # Recommended: move scripts to a /scripts folder
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
-  # the following line skips the linter which checks for copyrights
-  # comment the line when a copyright and license is added to all source files
   set(ament_cmake_copyright_FOUND TRUE)
-  # the following line skips cpplint (only works in a git repo)
-  # comment the line when this package is in a git repo and when
-  # a copyright and license is added to all source files
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()

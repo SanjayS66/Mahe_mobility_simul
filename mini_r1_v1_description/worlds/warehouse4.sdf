@@ -24,7 +24,7 @@
     <include>
       <uri>https://fuel.gazebosim.org/1.0/GhaithMhamdi/models/aruco_id4_box</uri>
       <name>aruco_4</name>
-      <pose>1.89199 9.39964 0.19 0 -0 2.3e-05</pose>
+      <pose>1.89199 9.39963 0.189999 0 0 2.3e-05</pose>
     </include>
     <include>
       <uri>https://fuel.gazebosim.org/1.0/GhaithMhamdi/models/aruco_id5_box</uri>
@@ -82,7 +82,7 @@
     </model>
     <model name='wall_west'>
       <static>true</static>
-      <pose>-13.6593 0 1 0 -0 0</pose>
+      <pose>-13.182 0 1 0 -0 0</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -124,7 +124,7 @@
     </model>
     <model name='mid_wall_left'>
       <static>true</static>
-      <pose>-7.00035 1.73403 1 0 -0 0</pose>
+      <pose>-6.5823 1.72974 1 0 -0 0</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -170,7 +170,7 @@
     </model>
     <model name='mid_vertical_top'>
       <static>true</static>
-      <pose>0 8.74504 1 0 -0 0</pose>
+      <pose>0 8.61932 1 0 -0 0</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -308,7 +308,7 @@
     </model>
     <model name='mid_vertical_bottom'>
       <static>true</static>
-      <pose>0 -8.62476 1 0 -0 0</pose>
+      <pose>0 -8.42436 1 0 -0 0</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -492,7 +492,7 @@
     </model>
     <model name='shelf_green'>
       <static>true</static>
-      <pose>5.93663 9.22955 0.5 0 -0 0</pose>
+      <pose>5.93663 9.29547 0.5 0 -0 0</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -538,7 +538,7 @@
     </model>
     <model name='shelf_yellow'>
       <static>true</static>
-      <pose>-4.10813 -0.7895 0.5 0 -0 0</pose>
+      <pose>-4.10813 -0.933196 0.5 0 -0 0</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -585,14 +585,13 @@
     <include>
       <uri>https://fuel.gazebosim.org/1.0/GhaithMhamdi/models/aruco_id5_box</uri>
       <name>aruco_5_4</name>
-      <pose>3.27464 9.2318 1.54929 0 0 -0</pose>
+      <pose>3.27464 9.4343 1.54929 -0 0 -0</pose>
     </include>
     <include>
       <uri>https://fuel.gazebosim.org/1.0/sanjay/models/supermarket_rack</uri>
       <name>rack_1</name>
-      <pose>2.52887 9.63286 1.74 0 0 -3.14157</pose>
+      <pose>2.52887 9.69769 1.74 0 -0 -3.14157</pose>
     </include>
-    
     <model name='wall_west_1'>
       <static>true</static>
       <pose>7.07114 0.855018 1 0 -0 0</pose>
@@ -637,7 +636,7 @@
     </model>
     <model name='mid_wall_left_1'>
       <static>true</static>
-      <pose>-6.98966 -1.50659 1 0 -0 0</pose>
+      <pose>-6.57623 -1.53641 1 0 -0 0</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -683,7 +682,7 @@
     </model>
     <model name='blocker_tl_1'>
       <static>true</static>
-      <pose>2.69537 9.90383 0.75 0 -0 0</pose>
+      <pose>2.60645 9.90383 0.75 0 -0 0</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -729,7 +728,7 @@
     </model>
     <model name='shelf_yellow_1'>
       <static>true</static>
-      <pose>2.3475 -2.82812 0.5 0 -0 1.5708</pose>
+      <pose>2.3475 -2.30105 0.5 0 -0 1.5708</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -821,7 +820,7 @@
     </model>
     <model name='shelf_green_1_1'>
       <static>true</static>
-      <pose>3.28893 -7.35813 0.5 0 0 -3.14159</pose>
+      <pose>3.28893 -7.35813 0.5 0 -0 -3.14159</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -913,7 +912,7 @@
     </model>
     <model name='mid_vertical_lower_1'>
       <static>true</static>
-      <pose>1.97633 0.967688 1 0 -0 0</pose>
+      <pose>1.8223 1.22331 1 0 -0 0</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -1005,7 +1004,7 @@
     </model>
     <model name='shelf_yellow_1_1'>
       <static>true</static>
-      <pose>5.57678 -10.0274 0.5 0 0 -3.14159</pose>
+      <pose>5.57678 -10.0274 0.5 0 -0 -3.14159</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -1097,7 +1096,7 @@
     </model>
     <model name='shelf_blue_2'>
       <static>true</static>
-      <pose>3.97311 -3.11209 0.500391 0 -0 0</pose>
+      <pose>3.86894 -3.11209 0.500391 0 -0 0</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -1279,6 +1278,11 @@
       </link>
       <self_collide>false</self_collide>
     </model>
+    <include>
+      <uri>file://<urdf-string></uri>
+      <name>mini_r1</name>
+      <pose>-5.8e-05 -2.1e-05 0.038029 -2e-06 -0.000256 0.000149</pose>
+    </include>
     <light name='sun' type='directional'>
       <pose>0 0 10 0 -0 0</pose>
       <cast_shadows>true</cast_shadows>
