@@ -4587,5 +4587,133 @@
         <falloff>0</falloff>
       </spot>
     </light>
+<model name='sign_left'>
+      <static>true</static>
+      <pose>2.0 4.0 1.0 0 0 0</pose> 
+      <link name='link'>
+        
+        <visual name='bg_visual'>
+          <pose>-0.001 0 0 0 0 0</pose> <geometry><box><size>0.001 0.42 0.42</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse>
+          </material>
+        </visual>
+
+        <visual name='img_visual'>
+          <geometry><box><size>0.001 0.4 0.4</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse>
+            <pbr><metal>
+              <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/left.png</albedo_map>
+            </metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name='sign_right'>
+      <static>true</static>
+      <pose>2.0 4.5 1.0 0 0 0</pose> 
+      <link name='link'>
+        <visual name='bg_visual'>
+          <pose>-0.001 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.42 0.42</size></box></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+        <visual name='img_visual'>
+          <geometry><box><size>0.001 0.4 0.4</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse>
+            <pbr><metal>
+              <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/right.png</albedo_map>
+            </metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name='sign_forward'>
+      <static>true</static>
+      <pose>2.0 5.0 1.0 0 0 0</pose> 
+      <link name='link'>
+        <visual name='bg_visual'>
+          <pose>-0.001 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.42 0.42</size></box></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+        <visual name='img_visual'>
+          <geometry><box><size>0.001 0.4 0.4</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse>
+            <pbr><metal>
+              <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/straight.png</albedo_map>
+            </metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name='sign_stop'>
+      <static>true</static>
+      <pose>2.0 5.5 1.0 0 0 0</pose> 
+      <link name='link'>
+        <visual name='bg_visual'>
+          <pose>-0.001 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.42 0.42</size></box></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+        <visual name='img_visual'>
+          <geometry><box><size>0.001 0.4 0.4</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse>
+            <pbr><metal>
+              <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/stop.png</albedo_map>
+            </metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name='sign_inplace_rotation'>
+      <static>true</static>
+      <pose>2.0 6.0 1.0 0 0 0</pose> 
+      <link name='link'>
+        <visual name='bg_visual'>
+          <pose>-0.001 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.42 0.42</size></box></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+        <visual name='img_visual'>
+          <geometry><box><size>0.001 0.4 0.4</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse>
+            <pbr><metal>
+              <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/rotate.png</albedo_map>
+            </metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name='sign_goal'>
+      <static>true</static>
+      <pose>2.0 6.5 1.0 0 0 0</pose> 
+      <link name='link'>
+        <visual name='bg_visual'>
+          <pose>-0.001 0 0 0 0 0</pose>
+          <geometry><box><size>0.001 0.42 0.42</size></box></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+        <visual name='img_visual'>
+          <geometry><box><size>0.001 0.4 0.4</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse>
+            <pbr><metal>
+              <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/goal.png</albedo_map>
+            </metal></pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
   </world>
 </sdf>

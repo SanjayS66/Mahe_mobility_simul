@@ -17,7 +17,7 @@ def generate_launch_description():
     description_package_share = get_package_share_directory(description_package)
     simulation_package_share = get_package_share_directory(simulation_package)
 
-    default_world = os.path.join(description_package_share, 'worlds', 'warehouse4.sdf')
+    default_world = os.path.join(description_package_share, 'worlds', 'warehouse_final.sdf')
     world_path = LaunchConfiguration('world')
     
     ekf_config_path = os.path.join(
@@ -25,6 +25,7 @@ def generate_launch_description():
         'config',
         'ekf.yaml'
     )
+
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(
                     [
@@ -85,7 +86,7 @@ def generate_launch_description():
         output='screen',
         parameters=[
             ekf_config_path, 
-            {'use_sim_time': True}  # <-- Add this line right here
+            {'use_sim_time': True}  
         ]
     )
     return LaunchDescription([ 
