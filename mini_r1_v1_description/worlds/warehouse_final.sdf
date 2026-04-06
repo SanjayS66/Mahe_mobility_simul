@@ -250,704 +250,6 @@
       </link>
       <self_collide>false</self_collide>
     </model>
-    <model name='mini_r1'>
-      <link name='base_link'>
-        <inertial>
-          <pose>0.00657 0 0.055274 0 -0 0</pose>
-          <mass>1.27868</mass>
-          <inertia>
-            <ixx>0.0092917099999999999</ixx>
-            <ixy>4.4428900000000002e-08</ixy>
-            <ixz>-0.000603219</ixz>
-            <iyy>0.0168793</iyy>
-            <iyz>5.1842000000000002e-08</iyz>
-            <izz>0.0213466</izz>
-          </inertia>
-        </inertial>
-        <collision name='base_link_collision'>
-          <pose>0 0 0 0 0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>file:///home/yash/mahe-mobility-2026/install/mini_r1_v1_description/share/mini_r1_v1_description/meshes/base_link.STL</uri>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <friction>
-              <ode>
-                <mu>0.20000000000000001</mu>
-                <mu2>0.20000000000000001</mu2>
-              </ode>
-            </friction>
-          </surface>
-        </collision>
-        <collision name='base_link_fixed_joint_lump__CAM_collision_1'>
-          <pose>0.1658 0.00050302 0.078 0 0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>file:///home/yash/mahe-mobility-2026/install/mini_r1_v1_description/share/mini_r1_v1_description/meshes/CAM.STL</uri>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <friction>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <collision name='base_link_fixed_joint_lump__IMU_collision_2'>
-          <pose>0.095 0 0.08 0 0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>file:///home/yash/mahe-mobility-2026/install/mini_r1_v1_description/share/mini_r1_v1_description/meshes/IMU.STL</uri>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <friction>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <collision name='base_link_fixed_joint_lump__LIDAR_collision_3'>
-          <pose>0.095 0 0.12 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.040000000000000001</length>
-              <radius>0.037999999999999999</radius>
-            </cylinder>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-          </surface>
-        </collision>
-        <visual name='base_link_visual'>
-          <pose>0 0 0 0 0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>file:///home/yash/mahe-mobility-2026/install/mini_r1_v1_description/share/mini_r1_v1_description/meshes/base_link.STL</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <ambient>0.01 0.01 0.01 1</ambient>
-            <diffuse>0.01 0.01 0.01 1</diffuse>
-            <specular>0.1 0.1 0.1 1</specular>
-            <emissive>0 0 0 0</emissive>
-          </material>
-        </visual>
-        <visual name='base_link_fixed_joint_lump__CAM_visual_1'>
-          <pose>0.1658 0.00050302 0.078 0 0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>file:///home/yash/mahe-mobility-2026/install/mini_r1_v1_description/share/mini_r1_v1_description/meshes/CAM.STL</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <ambient>0.5 0.5 0.5 1</ambient>
-            <diffuse>0.5 0.5 0.5 1</diffuse>
-            <specular>0.1 0.1 0.1 1</specular>
-            <emissive>0 0 0 0</emissive>
-          </material>
-        </visual>
-        <visual name='base_link_fixed_joint_lump__IMU_visual_2'>
-          <pose>0.095 0 0.08 0 0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>file:///home/yash/mahe-mobility-2026/install/mini_r1_v1_description/share/mini_r1_v1_description/meshes/IMU.STL</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <diffuse>0.625 0.625 0.625 1</diffuse>
-            <ambient>0.625 0.625 0.625 1</ambient>
-          </material>
-        </visual>
-        <visual name='base_link_fixed_joint_lump__LIDAR_visual_3'>
-          <pose>0.095 0 0.12 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.040000000000000001</length>
-              <radius>0.037999999999999999</radius>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.05 0.05 0.05 1</ambient>
-            <diffuse>0.05 0.05 0.05 1</diffuse>
-            <specular>0.1 0.1 0.1 1</specular>
-            <emissive>0 0 0 0</emissive>
-          </material>
-        </visual>
-        <self_collide>true</self_collide>
-        <gravity>true</gravity>
-        <sensor name='camera' type='camera'>
-          <pose>0.1658 0.000503 0.078 0 -0 0</pose>
-          <topic>/r1_mini/camera</topic>
-          <update_rate>30</update_rate>
-          <enable_metrics>false</enable_metrics>
-          <camera name='__default__'>
-            <pose>0 0 0 0 -0 0</pose>
-            <horizontal_fov>1.089</horizontal_fov>
-            <image>
-              <width>640</width>
-              <height>480</height>
-              <format>RGB_INT8</format>
-              <anti_aliasing>4</anti_aliasing>
-            </image>
-            <camera_info_topic>__default__</camera_info_topic>
-            <trigger_topic></trigger_topic>
-            <triggered>false</triggered>
-            <clip>
-              <near>0.050000000000000003</near>
-              <far>8</far>
-            </clip>
-            <save enabled='false'>
-              <path>__default__</path>
-            </save>
-            <visibility_mask>4294967295</visibility_mask>
-            <noise>
-              <type>none</type>
-              <mean>0</mean>
-              <stddev>0</stddev>
-            </noise>
-            <distortion>
-              <k1>0</k1>
-              <k2>0</k2>
-              <k3>0</k3>
-              <p1>0</p1>
-              <p2>0</p2>
-              <center>0.5 0.5</center>
-            </distortion>
-            <lens>
-              <type>stereographic</type>
-              <scale_to_hfov>true</scale_to_hfov>
-              <cutoff_angle>1.5708</cutoff_angle>
-              <env_texture_size>256</env_texture_size>
-            </lens>
-            <optical_frame_id></optical_frame_id>
-          </camera>
-        </sensor>
-        <sensor name='imu' type='imu'>
-          <pose>0.095 0 0.08 0 -0 0</pose>
-          <topic>/r1_mini/imu</topic>
-          <update_rate>100</update_rate>
-          <enable_metrics>false</enable_metrics>
-          <imu>
-            <orientation_reference_frame>
-              <localization>CUSTOM</localization>
-              <custom_rpy>0 0 0</custom_rpy>
-              <grav_dir_x>1 0 0</grav_dir_x>
-            </orientation_reference_frame>
-            <angular_velocity>
-              <x>
-                <noise type='gaussian'>
-                  <mean>0</mean>
-                  <stddev>0.00020000000000000001</stddev>
-                  <bias_mean>0</bias_mean>
-                  <bias_stddev>0</bias_stddev>
-                  <dynamic_bias_stddev>0</dynamic_bias_stddev>
-                  <dynamic_bias_correlation_time>0</dynamic_bias_correlation_time>
-                  <precision>0</precision>
-                </noise>
-              </x>
-              <y>
-                <noise type='gaussian'>
-                  <mean>0</mean>
-                  <stddev>0.00020000000000000001</stddev>
-                  <bias_mean>0</bias_mean>
-                  <bias_stddev>0</bias_stddev>
-                  <dynamic_bias_stddev>0</dynamic_bias_stddev>
-                  <dynamic_bias_correlation_time>0</dynamic_bias_correlation_time>
-                  <precision>0</precision>
-                </noise>
-              </y>
-              <z>
-                <noise type='gaussian'>
-                  <mean>0</mean>
-                  <stddev>0.00020000000000000001</stddev>
-                  <bias_mean>0</bias_mean>
-                  <bias_stddev>0</bias_stddev>
-                  <dynamic_bias_stddev>0</dynamic_bias_stddev>
-                  <dynamic_bias_correlation_time>0</dynamic_bias_correlation_time>
-                  <precision>0</precision>
-                </noise>
-              </z>
-            </angular_velocity>
-            <linear_acceleration>
-              <x>
-                <noise type='gaussian'>
-                  <mean>0</mean>
-                  <stddev>0.017000000000000001</stddev>
-                  <bias_mean>0</bias_mean>
-                  <bias_stddev>0</bias_stddev>
-                  <dynamic_bias_stddev>0</dynamic_bias_stddev>
-                  <dynamic_bias_correlation_time>0</dynamic_bias_correlation_time>
-                  <precision>0</precision>
-                </noise>
-              </x>
-              <y>
-                <noise type='gaussian'>
-                  <mean>0</mean>
-                  <stddev>0.017000000000000001</stddev>
-                  <bias_mean>0</bias_mean>
-                  <bias_stddev>0</bias_stddev>
-                  <dynamic_bias_stddev>0</dynamic_bias_stddev>
-                  <dynamic_bias_correlation_time>0</dynamic_bias_correlation_time>
-                  <precision>0</precision>
-                </noise>
-              </y>
-              <z>
-                <noise type='gaussian'>
-                  <mean>0</mean>
-                  <stddev>0.017000000000000001</stddev>
-                  <bias_mean>0</bias_mean>
-                  <bias_stddev>0</bias_stddev>
-                  <dynamic_bias_stddev>0</dynamic_bias_stddev>
-                  <dynamic_bias_correlation_time>0</dynamic_bias_correlation_time>
-                  <precision>0</precision>
-                </noise>
-              </z>
-            </linear_acceleration>
-            <enable_orientation>true</enable_orientation>
-          </imu>
-        </sensor>
-        <sensor name='lidar' type='gpu_lidar'>
-          <pose>0.095 0 0.12 0 -0 0</pose>
-          <topic>/r1_mini/lidar</topic>
-          <update_rate>10</update_rate>
-          <enable_metrics>false</enable_metrics>
-          <lidar>
-            <scan>
-              <horizontal>
-                <samples>360</samples>
-                <resolution>1</resolution>
-                <min_angle>-3.1400000000000001</min_angle>
-                <max_angle>3.1400000000000001</max_angle>
-              </horizontal>
-              <vertical>
-                <samples>1</samples>
-                <min_angle>0</min_angle>
-                <max_angle>0</max_angle>
-                <resolution>1</resolution>
-              </vertical>
-            </scan>
-            <range>
-              <min>0.12</min>
-              <max>30</max>
-              <resolution>0.11</resolution>
-            </range>
-            <noise>
-              <type>none</type>
-              <mean>0</mean>
-              <stddev>0</stddev>
-            </noise>
-            <visibility_mask>4294967295</visibility_mask>
-          </lidar>
-        </sensor>
-        <pose>0 0 0 0 -0 0</pose>
-        <enable_wind>false</enable_wind>
-      </link>
-      <joint name='J_TR_LF' type='revolute'>
-        <pose>0 0 0 0 -0 0</pose>
-        <parent>base_link</parent>
-        <child>TR_LF</child>
-        <axis>
-          <xyz>0 1 0</xyz>
-          <limit>
-            <lower>-10000000000000000</lower>
-            <upper>10000000000000000</upper>
-            <effort>inf</effort>
-            <velocity>inf</velocity>
-            <stiffness>100000000</stiffness>
-            <dissipation>1</dissipation>
-          </limit>
-          <dynamics>
-            <spring_reference>0</spring_reference>
-            <spring_stiffness>0</spring_stiffness>
-            <damping>0</damping>
-            <friction>0</friction>
-          </dynamics>
-        </axis>
-      </joint>
-      <link name='TR_LF'>
-        <pose>0.13 0.11371 0.0278 0 0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>0.30043999999999998</mass>
-          <inertia>
-            <ixx>0.00051575000000000004</ixx>
-            <ixy>2.2786e-09</ixy>
-            <ixz>-1.1409e-08</ixz>
-            <iyy>0.00086728</iyy>
-            <iyz>-1.8296000000000001e-10</iyz>
-            <izz>0.00051568999999999996</izz>
-          </inertia>
-        </inertial>
-        <collision name='TR_LF_collision'>
-          <pose>0 0 0 0 0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>file:///home/yash/mahe-mobility-2026/install/mini_r1_v1_description/share/mini_r1_v1_description/meshes/TR_LF.STL</uri>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <friction>
-              <ode>
-                <mu>0.20000000000000001</mu>
-                <mu2>0.20000000000000001</mu2>
-              </ode>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='TR_LF_visual'>
-          <pose>0 0 0 0 0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>file:///home/yash/mahe-mobility-2026/install/mini_r1_v1_description/share/mini_r1_v1_description/meshes/TR_LF.STL</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <ambient>0.01 0.01 0.01 1</ambient>
-            <diffuse>0.01 0.01 0.01 1</diffuse>
-            <specular>0.1 0.1 0.1 1</specular>
-            <emissive>0 0 0 0</emissive>
-          </material>
-        </visual>
-        <self_collide>true</self_collide>
-        <enable_wind>false</enable_wind>
-      </link>
-      <joint name='J_TR_LR' type='revolute'>
-        <pose>0 0 0 0 -0 0</pose>
-        <parent>base_link</parent>
-        <child>TR_LR</child>
-        <axis>
-          <xyz>0 1 0</xyz>
-          <limit>
-            <lower>-10000000000000000</lower>
-            <upper>10000000000000000</upper>
-            <effort>inf</effort>
-            <velocity>inf</velocity>
-            <stiffness>100000000</stiffness>
-            <dissipation>1</dissipation>
-          </limit>
-          <dynamics>
-            <spring_reference>0</spring_reference>
-            <spring_stiffness>0</spring_stiffness>
-            <damping>0</damping>
-            <friction>0</friction>
-          </dynamics>
-        </axis>
-      </joint>
-      <link name='TR_LR'>
-        <pose>-0.13 0.11371 0.0278 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>0.30365799999999998</mass>
-          <inertia>
-            <ixx>0.00052402999999999998</ixx>
-            <ixy>-2.2895e-09</ixy>
-            <ixz>8.5108e-09</ixz>
-            <iyy>0.00088002600000000001</iyy>
-            <iyz>-6.8877999999999995e-11</iyz>
-            <izz>0.00052397000000000001</izz>
-          </inertia>
-        </inertial>
-        <collision name='TR_LR_collision'>
-          <pose>0 0 0 0 0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>file:///home/yash/mahe-mobility-2026/install/mini_r1_v1_description/share/mini_r1_v1_description/meshes/TR_LR.STL</uri>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <friction>
-              <ode>
-                <mu>0.20000000000000001</mu>
-                <mu2>0.20000000000000001</mu2>
-              </ode>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='TR_LR_visual'>
-          <pose>0 0 0 0 0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>file:///home/yash/mahe-mobility-2026/install/mini_r1_v1_description/share/mini_r1_v1_description/meshes/TR_LR.STL</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <ambient>0.01 0.01 0.01 1</ambient>
-            <diffuse>0.01 0.01 0.01 1</diffuse>
-            <specular>0.1 0.1 0.1 1</specular>
-            <emissive>0 0 0 0</emissive>
-          </material>
-        </visual>
-        <self_collide>true</self_collide>
-        <enable_wind>false</enable_wind>
-      </link>
-      <joint name='J_TR_RF' type='revolute'>
-        <pose>0 0 0 0 -0 0</pose>
-        <parent>base_link</parent>
-        <child>TR_RF</child>
-        <axis>
-          <xyz>0 1 0</xyz>
-          <limit>
-            <lower>-10000000000000000</lower>
-            <upper>10000000000000000</upper>
-            <effort>inf</effort>
-            <velocity>inf</velocity>
-            <stiffness>100000000</stiffness>
-            <dissipation>1</dissipation>
-          </limit>
-          <dynamics>
-            <spring_reference>0</spring_reference>
-            <spring_stiffness>0</spring_stiffness>
-            <damping>0</damping>
-            <friction>0</friction>
-          </dynamics>
-        </axis>
-      </joint>
-      <link name='TR_RF'>
-        <pose>0.13 -0.11371 0.0278 0 0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>0.30043999999999998</mass>
-          <inertia>
-            <ixx>0.00051575000000000004</ixx>
-            <ixy>2.2786e-09</ixy>
-            <ixz>-1.1409e-08</ixz>
-            <iyy>0.00086728</iyy>
-            <iyz>-1.8296000000000001e-10</iyz>
-            <izz>0.00051568999999999996</izz>
-          </inertia>
-        </inertial>
-        <collision name='TR_RF_collision'>
-          <pose>0 0 0 0 0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>file:///home/yash/mahe-mobility-2026/install/mini_r1_v1_description/share/mini_r1_v1_description/meshes/TR_RF.STL</uri>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <friction>
-              <ode>
-                <mu>0.20000000000000001</mu>
-                <mu2>0.20000000000000001</mu2>
-              </ode>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='TR_RF_visual'>
-          <pose>0 0 0 0 0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>file:///home/yash/mahe-mobility-2026/install/mini_r1_v1_description/share/mini_r1_v1_description/meshes/TR_RF.STL</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <ambient>0.01 0.01 0.01 1</ambient>
-            <diffuse>0.01 0.01 0.01 1</diffuse>
-            <specular>0.1 0.1 0.1 1</specular>
-            <emissive>0 0 0 0</emissive>
-          </material>
-        </visual>
-        <self_collide>true</self_collide>
-        <enable_wind>false</enable_wind>
-      </link>
-      <joint name='J_TR_RR' type='revolute'>
-        <pose>0 0 0 0 -0 0</pose>
-        <parent>base_link</parent>
-        <child>TR_RR</child>
-        <axis>
-          <xyz>0 1 0</xyz>
-          <limit>
-            <lower>-10000000000000000</lower>
-            <upper>10000000000000000</upper>
-            <effort>inf</effort>
-            <velocity>inf</velocity>
-            <stiffness>100000000</stiffness>
-            <dissipation>1</dissipation>
-          </limit>
-          <dynamics>
-            <spring_reference>0</spring_reference>
-            <spring_stiffness>0</spring_stiffness>
-            <damping>0</damping>
-            <friction>0</friction>
-          </dynamics>
-        </axis>
-      </joint>
-      <link name='TR_RR'>
-        <pose>-0.13 -0.11269 0.0278 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>0.30043999999999998</mass>
-          <inertia>
-            <ixx>0.00051574699999999999</ixx>
-            <ixy>2.2853e-09</ixy>
-            <ixz>-5.4383000000000001e-09</ixz>
-            <iyy>0.00086727699999999996</iyy>
-            <iyz>4.9031e-11</iyz>
-            <izz>0.00051568700000000002</izz>
-          </inertia>
-        </inertial>
-        <collision name='TR_RR_collision'>
-          <pose>0 0 0 0 0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>file:///home/yash/mahe-mobility-2026/install/mini_r1_v1_description/share/mini_r1_v1_description/meshes/TR_RR.STL</uri>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <friction>
-              <ode>
-                <mu>0.20000000000000001</mu>
-                <mu2>0.20000000000000001</mu2>
-              </ode>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='TR_RR_visual'>
-          <pose>0 0 0 0 0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>file:///home/yash/mahe-mobility-2026/install/mini_r1_v1_description/share/mini_r1_v1_description/meshes/TR_RR.STL</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <ambient>0.01 0.01 0.01 1</ambient>
-            <diffuse>0.01 0.01 0.01 1</diffuse>
-            <specular>0.1 0.1 0.1 1</specular>
-            <emissive>0 0 0 0</emissive>
-          </material>
-        </visual>
-        <self_collide>true</self_collide>
-        <enable_wind>false</enable_wind>
-      </link>
-      <plugin name='gz::sim::systems::DiffDrive' filename='gz-sim-diff-drive-system'>
-        <odom_publisher_frequency>50</odom_publisher_frequency>
-        <left_joint>J_TR_LF</left_joint>
-        <left_joint>J_TR_LR</left_joint>
-        <right_joint>J_TR_RF</right_joint>
-        <right_joint>J_TR_RR</right_joint>
-        <wheel_separation>0.2885</wheel_separation>
-        <wheel_radius>0.065</wheel_radius>
-        <max_wheel_torque>50</max_wheel_torque>
-        <max_linear_acceleration>1.5</max_linear_acceleration>
-        <topic>cmd_vel</topic>
-        <publish_odom>true</publish_odom>
-        <publish_odom_tf>false</publish_odom_tf>
-        <publish_wheel_tf>false</publish_wheel_tf>
-        <tf_topic>/r1_mini/odom_tf</tf_topic>
-        <odom_topic>/r1_mini/odom</odom_topic>
-        <frame_id>odom</frame_id>
-        <child_frame_id>base_link</child_frame_id>
-      </plugin>
-      <plugin name='gz::sim::systems::JointStatePublisher' filename='gz-sim-joint-state-publisher-system'>
-        <update_rate>100</update_rate>
-        <topic>/r1_mini/joint_states</topic>
-        <joint_name>J_TR_LF</joint_name>
-        <joint_name>J_TR_LR</joint_name>
-        <joint_name>J_TR_RF</joint_name>
-        <joint_name>J_TR_RR</joint_name>
-      </plugin>
-      <frame name='J_CAM' attached_to='base_link'>
-        <pose>0.1658 0.000503 0.078 0 -0 0</pose>
-      </frame>
-      <frame name='CAM' attached_to='J_CAM'/>
-      <frame name='J_IMU' attached_to='base_link'>
-        <pose>0.095 0 0.08 0 -0 0</pose>
-      </frame>
-      <frame name='IMU' attached_to='J_IMU'/>
-      <frame name='J_LIDAR' attached_to='base_link'>
-        <pose>0.095 0 0.12 0 -0 0</pose>
-      </frame>
-      <frame name='LIDAR' attached_to='J_LIDAR'/>
-      <pose>-0.000178 -5.3e-05 0.037974 0 0.000262 0.000619</pose>
-      <static>false</static>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='custom_wall_small'>
-      <static>true</static>
-      <pose>-0.819473 3.20993 0.5 0 0 -1.5708</pose>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>2 0.2 1</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <box>
-              <size>2 0.2 1</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.6 0.6 0.6 1</ambient>
-            <diffuse>0.6 0.6 0.6 1</diffuse>
-          </material>
-        </visual>
-        <pose>0 0 0 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <self_collide>false</self_collide>
-    </model>
     <model name='custom_wall_medium'>
       <static>true</static>
       <pose>-13.496 0.024668 1 0 -0 1.57863</pose>
@@ -2348,7 +1650,7 @@
     </model>
     <model name='flat_aruco_1'>
       <static>true</static>
-      <pose>4.29098 -1.68963 0.234058 6e-06 -0 1.5708</pose>
+      <pose>4.83005 -1.68963 0.234055 6e-06 -0 1.5708</pose>
       <link name='link'>
         <visual name='visual'>
           <geometry>
@@ -2361,7 +1663,7 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/4x4_1000-0.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/4x4_1000-0.png</albedo_map>
               </metal>
             </pbr>
           </material>
@@ -2398,7 +1700,7 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/4x4_1000-1.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/4x4_1000-1.png</albedo_map>
               </metal>
             </pbr>
           </material>
@@ -2422,7 +1724,7 @@
     </model>
     <model name='flat_aruco_3'>
       <static>true</static>
-      <pose>5.6873 2.32395 0.312326 -0 6e-06 -0.003957</pose>
+      <pose>5.6873 2.32395 0.239927 -0 6e-06 -0.003957</pose>
       <link name='link'>
         <visual name='visual'>
           <geometry>
@@ -2435,7 +1737,7 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/4x4_1000-2.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/4x4_1000-2.png</albedo_map>
               </metal>
             </pbr>
           </material>
@@ -2472,55 +1774,9 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/4x4_1000-3.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/4x4_1000-3.png</albedo_map>
               </metal>
             </pbr>
-          </material>
-        </visual>
-        <pose>0 0 0 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='custom_wall_large_3'>
-      <static>true</static>
-      <pose>2.65183 -3.4643 1.5 0 -0 1.57269</pose>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>8 0.2 3</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <box>
-              <size>8 0.2 3</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.6 0.6 0.6 1</ambient>
-            <diffuse>0.6 0.6 0.6 1</diffuse>
           </material>
         </visual>
         <pose>0 0 0 0 -0 0</pose>
@@ -2588,7 +1844,7 @@
     </model>
     <model name='custom_brown_shelf_1_1_2'>
       <static>true</static>
-      <pose>4.23589 0.17371 0 0 -0 0</pose>
+      <pose>3.62463 -0.011289 0 0 -0 0</pose>
       <link name='link'>
         <collision name='base_collision'>
           <pose>0 0 0.2 0 0 0</pose>
@@ -2798,7 +2054,7 @@
     </model>
     <model name='custom_brown_shelf_1_2'>
       <static>true</static>
-      <pose>6.4031 -2.87307 0 0 0 -1.5708</pose>
+      <pose>6.4031 -2.65054 0 0 0 -1.5708</pose>
       <link name='link'>
         <collision name='base_collision'>
           <pose>0 0 0.2 0 0 0</pose>
@@ -3008,7 +2264,7 @@
     </model>
     <model name='custom_brown_shelf_1_2_1'>
       <static>true</static>
-      <pose>3.25129 -5.05785 0 0 0 -1.5708</pose>
+      <pose>3.09659 -5.99818 0 0 0 -1.5708</pose>
       <link name='link'>
         <collision name='base_collision'>
           <pose>0 0 0.2 0 0 0</pose>
@@ -3218,7 +2474,7 @@
     </model>
     <model name='custom_brown_shelf_1_2_1_1'>
       <static>true</static>
-      <pose>6.29506 -8.27702 0 0 0 -1.5708</pose>
+      <pose>6.49228 -8.27702 0 0 0 -1.5708</pose>
       <link name='link'>
         <collision name='base_collision'>
           <pose>0 0 0.2 0 0 0</pose>
@@ -3474,7 +2730,7 @@
     </model>
     <model name='custom_brown_shelf_1_1_2_1'>
       <static>true</static>
-      <pose>4.23589 -1.17488 0 0 -0 0</pose>
+      <pose>4.91025 -1.17488 0 0 -0 0</pose>
       <link name='link'>
         <collision name='base_collision'>
           <pose>0 0 0.2 0 0 0</pose>
@@ -3894,7 +3150,7 @@
     </model>
     <model name='custom_brown_shelf_1_2_2_1_1'>
       <static>true</static>
-      <pose>0.20818 3.05693 0 0 0 -1.5708</pose>
+      <pose>0.016898 2.06588 0 0 0 -1.5708</pose>
       <link name='link'>
         <collision name='base_collision'>
           <pose>0 0 0.2 0 0 0</pose>
@@ -4102,303 +3358,9 @@
       </link>
       <self_collide>false</self_collide>
     </model>
-    <model name='sign_left'>
-      <static>true</static>
-      <pose>2 4 1 0 -0 0</pose>
-      <link name='link'>
-        <visual name='bg_visual'>
-          <pose>-0.001 0 0 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.001 0.42 0.42</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-          </material>
-        </visual>
-        <visual name='img_visual'>
-          <geometry>
-            <box>
-              <size>0.001 0.4 0.4</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <pbr>
-              <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/left.png</albedo_map>
-              </metal>
-            </pbr>
-          </material>
-        </visual>
-        <pose>0 0 0 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='sign_right'>
-      <static>true</static>
-      <pose>2 4.5 1 0 -0 0</pose>
-      <link name='link'>
-        <visual name='bg_visual'>
-          <pose>-0.001 0 0 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.001 0.42 0.42</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-          </material>
-        </visual>
-        <visual name='img_visual'>
-          <geometry>
-            <box>
-              <size>0.001 0.4 0.4</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <pbr>
-              <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/right.png</albedo_map>
-              </metal>
-            </pbr>
-          </material>
-        </visual>
-        <pose>0 0 0 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='sign_forward'>
-      <static>true</static>
-      <pose>2 5 1 0 -0 0</pose>
-      <link name='link'>
-        <visual name='bg_visual'>
-          <pose>-0.001 0 0 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.001 0.42 0.42</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-          </material>
-        </visual>
-        <visual name='img_visual'>
-          <geometry>
-            <box>
-              <size>0.001 0.4 0.4</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <pbr>
-              <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/straight.png</albedo_map>
-              </metal>
-            </pbr>
-          </material>
-        </visual>
-        <pose>0 0 0 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='sign_stop'>
-      <static>true</static>
-      <pose>2 5.5 1 0 -0 0</pose>
-      <link name='link'>
-        <visual name='bg_visual'>
-          <pose>-0.001 0 0 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.001 0.42 0.42</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-          </material>
-        </visual>
-        <visual name='img_visual'>
-          <geometry>
-            <box>
-              <size>0.001 0.4 0.4</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <pbr>
-              <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/stop.png</albedo_map>
-              </metal>
-            </pbr>
-          </material>
-        </visual>
-        <pose>0 0 0 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='sign_inplace_rotation'>
-      <static>true</static>
-      <pose>2 6 1 0 -0 0</pose>
-      <link name='link'>
-        <visual name='bg_visual'>
-          <pose>-0.001 0 0 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.001 0.42 0.42</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-          </material>
-        </visual>
-        <visual name='img_visual'>
-          <geometry>
-            <box>
-              <size>0.001 0.4 0.4</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <pbr>
-              <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/rotate.png</albedo_map>
-              </metal>
-            </pbr>
-          </material>
-        </visual>
-        <pose>0 0 0 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='sign_goal'>
-      <static>true</static>
-      <pose>2 6.5 1 0 -0 0</pose>
-      <link name='link'>
-        <visual name='bg_visual'>
-          <pose>-0.001 0 0 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.001 0.42 0.42</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-          </material>
-        </visual>
-        <visual name='img_visual'>
-          <geometry>
-            <box>
-              <size>0.001 0.4 0.4</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <pbr>
-              <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/goal.png</albedo_map>
-              </metal>
-            </pbr>
-          </material>
-        </visual>
-        <pose>0 0 0 0 -0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <self_collide>false</self_collide>
-    </model>
     <model name='sign_right_1'>
       <static>true</static>
-      <pose>-1.58614 0.941223 1 0 0 -3.14159</pose>
+      <pose>-0.877449 0.978112 0.207077 0 -0 -3.14159</pose>
       <link name='link'>
         <visual name='bg_visual'>
           <pose>-0.001 0 0 0 0 0</pose>
@@ -4423,17 +3385,31 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/right.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/right.png</albedo_map>
               </metal>
             </pbr>
           </material>
         </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
       </link>
       <self_collide>false</self_collide>
     </model>
     <model name='sign_stop_1'>
       <static>true</static>
-      <pose>-0.557658 -4.00027 0.452676 0 -0 1.5708</pose>
+      <pose>-0.557655 -4.85636 0.236957 0 -0 1.5708</pose>
       <link name='link'>
         <visual name='bg_visual'>
           <pose>-0.001 0 0 0 0 0</pose>
@@ -4458,17 +3434,31 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/stop.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/stop.png</albedo_map>
               </metal>
             </pbr>
           </material>
         </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
       </link>
       <self_collide>false</self_collide>
     </model>
     <model name='sign_right_2'>
       <static>true</static>
-      <pose>-1.64606 -0.739893 1 0 0 -1.5708</pose>
+      <pose>-0.66784 0.842541 0.207135 0 0 -1.5708</pose>
       <link name='link'>
         <visual name='bg_visual'>
           <pose>-0.001 0 0 0 0 0</pose>
@@ -4493,17 +3483,31 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/right.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/right.png</albedo_map>
               </metal>
             </pbr>
           </material>
         </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
       </link>
       <self_collide>false</self_collide>
     </model>
     <model name='sign_right_2_1'>
       <static>true</static>
-      <pose>2.37057 0.136859 0.732155 0 -0 3.14159</pose>
+      <pose>2.50436 0.136859 0.217066 0 -0 3.14159</pose>
       <link name='link'>
         <visual name='bg_visual'>
           <pose>-0.001 0 0 0 0 0</pose>
@@ -4528,17 +3532,31 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/right.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/right.png</albedo_map>
               </metal>
             </pbr>
           </material>
         </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
       </link>
       <self_collide>false</self_collide>
     </model>
     <model name='sign_left_1'>
       <static>true</static>
-      <pose>0.923557 -9.46712 0.270663 0 -0 1.5708</pose>
+      <pose>0.523816 -9.10073 0.220666 0 -0 1.5708</pose>
       <link name='link'>
         <visual name='bg_visual'>
           <pose>-0.001 0 0 0 0 0</pose>
@@ -4563,17 +3581,31 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/left.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/left.png</albedo_map>
               </metal>
             </pbr>
           </material>
         </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
       </link>
       <self_collide>false</self_collide>
     </model>
     <model name='sign_left_1_1'>
       <static>true</static>
-      <pose>5.7366 -8.30949 0.270663 0 0 -3.14159</pose>
+      <pose>5.25705 -9.23858 0.232003 0 0 -3.14159</pose>
       <link name='link'>
         <visual name='bg_visual'>
           <pose>-0.001 0 0 0 0 0</pose>
@@ -4598,17 +3630,31 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/left.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/left.png</albedo_map>
               </metal>
             </pbr>
           </material>
         </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
       </link>
       <self_collide>false</self_collide>
     </model>
     <model name='sign_inplace_rotation_1'>
       <static>true</static>
-      <pose>6.34391 -3.89677 0.536427 0 0 -1.5708</pose>
+      <pose>5.90131 -3.72268 0.232483 0 0 -1.5708</pose>
       <link name='link'>
         <visual name='bg_visual'>
           <pose>-0.001 0 0 0 0 0</pose>
@@ -4633,17 +3679,31 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/rotate.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/rotate.png</albedo_map>
               </metal>
             </pbr>
           </material>
         </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
       </link>
       <self_collide>false</self_collide>
     </model>
     <model name='sign_right_2_1_1'>
       <static>true</static>
-      <pose>5.54397 -8.16538 0.289979 0 -0 1.57079</pose>
+      <pose>5.4792 -9.44737 0.232717 0 -0 1.57079</pose>
       <link name='link'>
         <visual name='bg_visual'>
           <pose>-0.001 0 0 0 0 0</pose>
@@ -4668,17 +3728,31 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/right.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/right.png</albedo_map>
               </metal>
             </pbr>
           </material>
         </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
       </link>
       <self_collide>false</self_collide>
     </model>
     <model name='sign_right_2_1_1_1'>
       <static>true</static>
-      <pose>1.15994 -9.30617 0.289979 0 0 -6e-06</pose>
+      <pose>0.742051 -9.30617 0.198957 0 0 -6e-06</pose>
       <link name='link'>
         <visual name='bg_visual'>
           <pose>-0.001 0 0 0 0 0</pose>
@@ -4703,17 +3777,31 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/right.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/right.png</albedo_map>
               </metal>
             </pbr>
           </material>
         </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
       </link>
       <self_collide>false</self_collide>
     </model>
     <model name='sign_forward_1'>
       <static>true</static>
-      <pose>2.27607 -0.085391 0.782235 -1.5708 -0 -1.5708</pose>
+      <pose>2.27607 -0.147717 0.215288 -1.5708 0 -1.5708</pose>
       <link name='link'>
         <visual name='bg_visual'>
           <pose>-0.001 0 0 0 0 0</pose>
@@ -4738,17 +3826,31 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/straight.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/straight.png</albedo_map>
               </metal>
             </pbr>
           </material>
         </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
       </link>
       <self_collide>false</self_collide>
     </model>
     <model name='sign_right_3'>
       <static>true</static>
-      <pose>1.47546 4.11707 0.595268 0 0 -1.5708</pose>
+      <pose>1.47546 4.11707 0.257417 0 0 -1.5708</pose>
       <link name='link'>
         <visual name='bg_visual'>
           <pose>-0.001 0 0 0 0 0</pose>
@@ -4773,17 +3875,31 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/right.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/right.png</albedo_map>
               </metal>
             </pbr>
           </material>
         </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
       </link>
       <self_collide>false</self_collide>
     </model>
     <model name='sign_goal_1'>
       <static>true</static>
-      <pose>5.67692 3.26373 0.610983 0 0 -3.14159</pose>
+      <pose>5.67692 2.94263 0.610983 0 -0 -3.14159</pose>
       <link name='link'>
         <visual name='bg_visual'>
           <pose>-0.001 0 0 0 0 0</pose>
@@ -4808,14 +3924,751 @@
             <diffuse>1 1 1 1</diffuse>
             <pbr>
               <metal>
-                <albedo_map>file:////home/yash/mahe-mobility-2026/src/mini_r1_v1_description/assets/goal.png</albedo_map>
+                <albedo_map>model://mini_r1_v1_description/assets/goal.png</albedo_map>
               </metal>
             </pbr>
           </material>
         </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
       </link>
       <self_collide>false</self_collide>
     </model>
+    <model name='custom_brown_shelf_1_2_1_1_1'>
+      <static>true</static>
+      <pose>6.50601 -6.27799 0 0 0 -1.5708</pose>
+      <link name='link'>
+        <collision name='base_collision'>
+          <pose>0 0 0.2 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.4</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='base_visual'>
+          <pose>0 0 0.2 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='mid_shelf_collision'>
+          <pose>0 0 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.05</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='mid_shelf_visual'>
+          <pose>0 0 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='top_shelf_collision'>
+          <pose>0 0 1.8 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.05</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='top_shelf_visual'>
+          <pose>0 0 1.8 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='leg1_collision'>
+          <pose>0.95 -0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='leg1_visual'>
+          <pose>0.95 -0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='leg2_collision'>
+          <pose>-0.95 -0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='leg2_visual'>
+          <pose>-0.95 -0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='leg3_collision'>
+          <pose>0.95 0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='leg3_visual'>
+          <pose>0.95 0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='leg4_collision'>
+          <pose>-0.95 0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='leg4_visual'>
+          <pose>-0.95 0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='custom_brown_shelf_1_2_1_2'>
+      <static>true</static>
+      <pose>3.41002 -2.76503 0 0 0 -1.5708</pose>
+      <link name='link'>
+        <collision name='base_collision'>
+          <pose>0 0 0.2 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.4</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='base_visual'>
+          <pose>0 0 0.2 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='mid_shelf_collision'>
+          <pose>0 0 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.05</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='mid_shelf_visual'>
+          <pose>0 0 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='top_shelf_collision'>
+          <pose>0 0 1.8 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.05</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='top_shelf_visual'>
+          <pose>0 0 1.8 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='leg1_collision'>
+          <pose>0.95 -0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='leg1_visual'>
+          <pose>0.95 -0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='leg2_collision'>
+          <pose>-0.95 -0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='leg2_visual'>
+          <pose>-0.95 -0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='leg3_collision'>
+          <pose>0.95 0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='leg3_visual'>
+          <pose>0.95 0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='leg4_collision'>
+          <pose>-0.95 0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='leg4_visual'>
+          <pose>-0.95 0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='mid_vertical_lower_1_1'>
+      <static>true</static>
+      <pose>2.69061 -3.20699 1 0 0 -4e-06</pose>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.2 5 2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.2 5 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='mid_vertical_lower_1_1_1'>
+      <static>true</static>
+      <pose>-0.701278 4.55653 1 0 0 -4e-06</pose>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.2 5 2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.2 5 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='custom_brown_shelf_1_1_2_2'>
+      <static>true</static>
+      <pose>5.7526 -0.019201 0 0 -0 0</pose>
+      <link name='link'>
+        <collision name='base_collision'>
+          <pose>0 0 0.2 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.4</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='base_visual'>
+          <pose>0 0 0.2 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='mid_shelf_collision'>
+          <pose>0 0 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.05</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='mid_shelf_visual'>
+          <pose>0 0 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='top_shelf_collision'>
+          <pose>0 0 1.8 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.05</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='top_shelf_visual'>
+          <pose>0 0 1.8 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2 1 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='leg1_collision'>
+          <pose>0.95 -0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='leg1_visual'>
+          <pose>0.95 -0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='leg2_collision'>
+          <pose>-0.95 -0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='leg2_visual'>
+          <pose>-0.95 -0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='leg3_collision'>
+          <pose>0.95 0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='leg3_visual'>
+          <pose>0.95 0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name='leg4_collision'>
+          <pose>-0.95 0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='leg4_visual'>
+          <pose>-0.95 0.45 1.0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.4 0.2 0.1 1</ambient>
+            <diffuse>0.4 0.2 0.1 1</diffuse>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <self_collide>false</self_collide>
+    </model>
+
     <light name='sun' type='directional'>
       <pose>0 0 10 0 -0 0</pose>
       <cast_shadows>true</cast_shadows>

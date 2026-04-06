@@ -60,14 +60,30 @@
   gz_type_name: "ignition.msgs.IMU"
   direction: GZ_TO_ROS
 
+# 1. RGB Color Image
 - ros_topic_name: "/r1_mini/camera/image_raw"
-  gz_topic_name: "/r1_mini/camera"
+  gz_topic_name: "/r1_mini/camera/image"
   ros_type_name: "sensor_msgs/msg/Image"
   gz_type_name: "ignition.msgs.Image"
   direction: GZ_TO_ROS
 
+# 2. Raw Depth Image
+- ros_topic_name: "/r1_mini/camera/depth/image_raw"
+  gz_topic_name: "/r1_mini/camera/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "ignition.msgs.Image"
+  direction: GZ_TO_ROS
+
+# 3. 3D PointCloud (Contains both depth and color data)
+- ros_topic_name: "/r1_mini/camera/points"
+  gz_topic_name: "/r1_mini/camera/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "ignition.msgs.PointCloudPacked"
+  direction: GZ_TO_ROS
+
+# 4. Camera Info
 - ros_topic_name: "/r1_mini/camera/camera_info"
-  gz_topic_name: "/r1_mini/camera_info"
+  gz_topic_name: "/r1_mini/camera/camera_info"
   ros_type_name: "sensor_msgs/msg/CameraInfo"
   gz_type_name: "ignition.msgs.CameraInfo"
   direction: GZ_TO_ROS

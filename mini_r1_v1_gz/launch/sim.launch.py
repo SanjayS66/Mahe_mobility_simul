@@ -8,7 +8,7 @@ from launch.substitutions import LaunchConfiguration
 
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
-
+from launch.actions import AppendEnvironmentVariable
 
 def generate_launch_description():
     description_package = "mini_r1_v1_description"
@@ -25,6 +25,15 @@ def generate_launch_description():
         'config',
         'ekf.yaml'
     )
+
+    workspace_share_dir = os.path.abspath(os.path.join(description_package_share, '..'))
+
+    # 3. Append this dynamic path to the Gazebo environment variables
+    set_ign_resource_path = AppendEnvironmentVariable(
+        'IGN_GAZEBO_RESOURCE_PATH', workspace_share_dir)
+    
+    set_gz_resource_path = AppendEnvironmentVariable(
+        'GZ_SIM_RESOURCE_PATH', workspace_share_dir)
 
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(
@@ -47,7 +56,7 @@ def generate_launch_description():
                 executable="create",
                 arguments=["-topic", 'robot_description',
                            '-name', 'mini_r1',
-                           '-x', '0.0',
+                           '-x', '-11.0',
                            '-y', '0.0',
                            '-z', '0.07'],
                 output="screen"
@@ -93,6 +102,8 @@ def generate_launch_description():
         *launch_args,
         rsp,
         stamper,
+        set_ign_resource_path,
+        set_gz_resource_path,
         gz,
         ros_gz_bridge,
         spawn_entity,
