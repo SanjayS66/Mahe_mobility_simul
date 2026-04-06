@@ -252,7 +252,7 @@
     </model>
     <model name='custom_wall_medium'>
       <static>true</static>
-      <pose>-13.496 0.024668 1 0 -0 1.57863</pose>
+      <pose>-16.1961 0.003516 1 0 -0 1.57863</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -344,7 +344,7 @@
     </model>
     <model name='custom_brown_shelf'>
       <static>true</static>
-      <pose>-10.0187 1.38272 0 0 -0 0</pose>
+      <pose>-11.5743 1.38272 0 0 -0 0</pose>
       <link name='link'>
         <collision name='base_collision'>
           <pose>0 0 0.2 0 0 0</pose>
@@ -554,7 +554,7 @@
     </model>
     <model name='custom_brown_shelf_1'>
       <static>true</static>
-      <pose>-7.25268 1.38272 0 0 -0 0</pose>
+      <pose>-8.12302 1.38272 0 0 -0 0</pose>
       <link name='link'>
         <collision name='base_collision'>
           <pose>0 0 0.2 0 0 0</pose>
@@ -974,7 +974,7 @@
     </model>
     <model name='custom_brown_shelf_2'>
       <static>true</static>
-      <pose>-8.45921 -1.44701 0 0 -0 0</pose>
+      <pose>-9.09761 -1.44701 0 0 -0 0</pose>
       <link name='link'>
         <collision name='base_collision'>
           <pose>0 0 0.2 0 0 0</pose>
@@ -3605,7 +3605,7 @@
     </model>
     <model name='sign_left_1_1'>
       <static>true</static>
-      <pose>5.25705 -9.23858 0.232003 0 0 -3.14159</pose>
+      <pose>5.25705 -9.23858 0.232003 0 -0 -3.14159</pose>
       <link name='link'>
         <visual name='bg_visual'>
           <pose>-0.001 0 0 0 0 0</pose>
@@ -4669,6 +4669,124 @@
       <self_collide>false</self_collide>
     </model>
 
+
+    <model name='dynamic_obstacle'>
+      <static>false</static>
+      <pose>-6.39 -1.38 0.5 0 -0 -0</pose>
+      <link name='body'>
+        <kinematic>true</kinematic>
+        <inertial>
+          <mass>10</mass>
+          <inertia>
+            <ixx>0.083299999999999999</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.083299999999999999</iyy>
+            <iyz>0</iyz>
+            <izz>0.083299999999999999</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.5</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0</mu>
+                <mu2>0</mu2>
+              </ode>
+            </friction>
+            <contact/>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 0.3 0 1</ambient>
+            <diffuse>1 0.3 0 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <!-- <plugin name='ignition::gazebo::systems::TrajectoryFollower'
+                filename='ignition-gazebo-trajectory-follower-system'>
+          <link_name>body</link_name>
+          <loop>true</loop>
+          
+          <topic>/obstacle/cmd_vel</topic>
+          
+          <range_threshold>0.1</range_threshold>
+          <velocity>0.5</velocity> <angular_velocity>1.0</angular_velocity>
+          
+          <waypoint>-6.39 -1.38</waypoint>
+          <waypoint>-6.41 1.18</waypoint>
+        </plugin> -->
+        <plugin name='ignition::gazebo::systems::VelocityControl'
+        filename='ignition-gazebo-velocity-control-system'>
+          <link_name>body</link_name>
+          <topic>/obstacle/cmd_vel</topic>
+        </plugin>
+      <self_collide>false</self_collide>
+    </model>
+
+
+    <model name='custom_wall_medium_1'>
+      <static>true</static>
+      <pose>-15.5031 2.04748 1 0 -0 0.001603</pose>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>4 0.2 2</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>4 0.2 2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.6 0.6 0.6 1</ambient>
+            <diffuse>0.6 0.6 0.6 1</diffuse>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <self_collide>false</self_collide>
+    </model>
     <light name='sun' type='directional'>
       <pose>0 0 10 0 -0 0</pose>
       <cast_shadows>true</cast_shadows>

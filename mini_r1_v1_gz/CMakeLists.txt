@@ -20,7 +20,8 @@ install(DIRECTORY launch config
 # Install Python scripts so they are executable
 # Note: Ensure the path to 2d_goal_to_action.py is correct relative to CMakeLists.txt
 install(PROGRAMS
-  scripts/2d_goal_to_action.py  # Recommended: move scripts to a /scripts folder
+  scripts/2d_goal_to_action.py
+  scripts/obstacle_mover.py 
   DESTINATION lib/${PROJECT_NAME}
 )
 

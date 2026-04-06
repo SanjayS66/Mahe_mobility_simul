@@ -56,7 +56,7 @@ def generate_launch_description():
                 executable="create",
                 arguments=["-topic", 'robot_description',
                            '-name', 'mini_r1',
-                           '-x', '-11.0',
+                           '-x', '-14.0',
                            '-y', '0.0',
                            '-z', '0.07'],
                 output="screen"
@@ -98,6 +98,22 @@ def generate_launch_description():
             {'use_sim_time': True}  
         ]
     )
+
+    # --- NEW NODES ADDED FOR OBSTACLE MOVER ---
+    obstacle_mover = Node(
+        package='mini_r1_v1_gz',
+        executable='obstacle_mover.py',
+        output='screen'
+    )
+
+    obstacle_bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=['/obstacle/cmd_vel@geometry_msgs/msg/Twist]ignition.msgs.Twist'],
+        output='screen'
+    )
+    # ------------------------------------------
+
     return LaunchDescription([ 
         *launch_args,
         rsp,
@@ -107,7 +123,7 @@ def generate_launch_description():
         gz,
         ros_gz_bridge,
         spawn_entity,
-        robot_localization_node
-       
-
+        robot_localization_node,
+        obstacle_mover,      # Added here
+        obstacle_bridge      # Added here
     ])

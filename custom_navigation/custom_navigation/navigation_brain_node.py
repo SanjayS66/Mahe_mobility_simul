@@ -582,7 +582,8 @@ class NavigationBrainNode(Node):
                 self.stop_robot()
                 self.set_cooldown(cmd)
                 self.get_logger().info("[FSM] 360° inplace rotation done")
-               
+                self.current_state = self.STATE_CORRIDOR
+
             else:
                 t = Twist()
                 t.angular.z = 0.8

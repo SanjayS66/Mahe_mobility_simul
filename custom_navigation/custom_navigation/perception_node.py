@@ -48,7 +48,7 @@ class PerceptionNode(Node):
         default_model_path = os.path.join(
             package_share_directory, 
             'yolo_models', 
-            'bigger_dataset_s.pt'
+            'bigger_dataset_n.pt'
         )
 
         self.declare_parameter('model_path', default_model_path)
