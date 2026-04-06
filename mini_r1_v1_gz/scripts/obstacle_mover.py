@@ -11,8 +11,8 @@ class ObstacleController(Node):
         self.publisher_ = self.create_publisher(Twist, '/obstacle/cmd_vel', 10)
         
         # --- TUNABLE PARAMETERS ---
-        self.speed = 0.2         # Velocity in m/s
-        self.travel_time = 12.5   # How many seconds to travel before reversing
+        self.speed = 0.1         # Velocity in m/s
+        self.travel_time = 37   # How many seconds to travel before reversing
         # --------------------------
         
         self.direction = 1.0     # Starts positive (1.0), flips to negative (-1.0)

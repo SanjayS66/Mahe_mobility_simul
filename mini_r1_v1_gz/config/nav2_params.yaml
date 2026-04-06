@@ -148,8 +148,8 @@ local_costmap:
       global_frame: odom
       robot_base_frame: base_link
       rolling_window: true
-      width: 4                     # Matched to 4m window
-      height: 4
+      width: 6                     # Matched to 4m window
+      height: 6
       resolution: 0.05
       robot_radius: 0.22
       plugins: ["obstacle_layer", "inflation_layer"]
